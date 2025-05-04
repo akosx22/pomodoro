@@ -13,7 +13,7 @@ const longSettingsEl = document.querySelector(".settings__value--long");
 const progressCircleEl = document.querySelector(".pomodoro__circle--progress");
 
 // Define variables
-let pomodoroTime = 1;
+let pomodoroTime = 25;
 let totalSeconds = pomodoroTime * 60;
 let remainingSeconds = totalSeconds;
 
@@ -22,8 +22,8 @@ let pomodoroTimer;
 let phase = "pomodoro";
 let round = 1;
 
-let shortTime = 1;
-let longTime = 2;
+let shortTime = 5;
+let longTime = 25;
 
 let isRunning = false;
 let isAdjustable = true; // Settings modification
