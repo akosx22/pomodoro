@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <main>
+      <h1>Pomodoro Timer</h1>
+      <div class="pomodoro__wrapper">
+        <svg class="pomodoro__circle" width="360px" height="360px">
+          <!-- Háttér kör (szürke, fixen látszik) -->
+          <circle
+            class="pomodoro__circle--bg"
+            cx="180"
+            cy="180"
+            r="170"
+            stroke-width="11"
+            fill="none"
+          />
+          <!-- Progress kör -->
+          <circle
+            class="pomodoro__circle--progress"
+            cx="180"
+            cy="180"
+            r="170"
+            stroke-width="11"
+            fill="none"
+          />
+        </svg>
+        <section class="pomodoro">
+          <h2 class="pomodoro__round">Pomodoro 1</h2>
+          <p class="pomodoro__time">25:00</p>
+        </section>
+      </div>
+      <div class="pomodoro__controls">
+        <button class="pomodoro__button pomodoro__button--start">Start</button>
+        <button class="pomodoro__button pomodoro__button--reset">Reset</button>
+      </div>
+      <section class="settings">
+        <div class="settings__item">
+          <p class="settings__label">Pomodoro</p>
+          <p class="settings__value settings__value--pomodoro">25:00</p>
+          <div class="settings__controls">
+            <button
+              class="settings__button settings__button--minus"
+              data-type="pomodoro"
+            >
+              -
+            </button>
+            <button
+              class="settings__button settings__button--plus"
+              data-type="pomodoro"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div class="settings__item">
+          <p class="settings__label">Short Break</p>
+          <p class="settings__value settings__value--short">05:00</p>
+          <div class="settings__controls">
+            <button
+              class="settings__button settings__button--minus"
+              data-type="short"
+            >
+              -
+            </button>
+            <button
+              class="settings__button settings__button--plus"
+              data-type="short"
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        <div class="settings__item">
+          <p class="settings__label">Long Break</p>
+          <p class="settings__value settings__value--long">25:00</p>
+          <div class="settings__controls">
+            <button
+              class="settings__button settings__button--minus"
+              data-type="long"
+            >
+              -
+            </button>
+            <button
+              class="settings__button settings__button--plus"
+              data-type="long"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
